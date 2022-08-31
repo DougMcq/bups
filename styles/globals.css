@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+/* font-family: 'Bitter', serif; */
+/* font-family: 'Montserrat', sans-serif; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  background-color: whitesmoke;
+  @apply font-montserrat text-base md:text-lg xl:text-lg font-medium;
+}
+
+.bg-hero {
+  background-image: url("/hero.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: aliceblue;
+}
+::-webkit-scrollbar-thumb {
+  background: #997855;
+  border-radius: 20px;
+}
+
+a {
+  color: inherit;
+    text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
