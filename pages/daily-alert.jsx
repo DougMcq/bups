@@ -88,13 +88,7 @@ const DailyAlert = () => {
           email: values.email,
         });
         emailjs
-          .send(
-            process.env.EMAILJS_SERVICE_ID,
-            process.env.EMAILJS_TEMPLATE_ID,
-            values,
-            process.env.EMAILJS_PUBLIC_KEY
-          )
-          .then(
+          .send(`${process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID}`, values, `${process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY}`).then(
             (result) => {
               console.log(result.text);
             },
